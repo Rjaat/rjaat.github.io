@@ -746,17 +746,47 @@ a:hover {
   color: #4e4e4e;
 }
 
-.skill-mf .progress {
-  background-color: #cde1f8;
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+.skill-mf ul {
+  list-style-type: none;
+  padding: 10px;
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #0078ff;
+.skill-mf ul li {
+  display: inline-block;
+  background-color: #2b92f3;
+  color: #000000;
+  border: 2px solid #ccc;
+  padding: 12px 20px;
+  margin-right: 15px;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 14px;
 }
+
+.skill-mf ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #c0c0c0;
+}
+
+
+
+.skill-mf ul li:hover::before {
+  color: #555;
+}
+
+.skill-mf ul li:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+
+.skill-mf ul li:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Services
@@ -1287,3 +1317,60 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  transition: opacity 1s ease;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
